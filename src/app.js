@@ -1,11 +1,16 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
-
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
-
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let pronoun = ["Nuestro", "Vuestro"];
+  let adj = ["grande", "pequeño"];
+  let noun = ["hijo", "gato"];
+
+  let textForLoop = "";
+
+  for (let p = 0; p < pronoun.length; p++) {
+    for (let a = 0; a < adj.length; a++) {
+      for (let n = 0; n < noun.length; n++) {
+        textForLoop += pronoun[p] + adj[a] + noun[n] + ".com<br>";
+      }
+    }
+  }
+  document.getElementById("excuse").innerHTML = textForLoop;
 };
